@@ -1,0 +1,177 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 14,
+        "name": "Registeration Test Scenario",
+        "description": "",
+        "id": "mercurytours-feature;registeration-test-scenario;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 807015700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "RegisterPageTest.teardown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 9295124100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user is already on landing Page",
+            "match": {
+              "location": "LandingPageTest.user_is_already_on_landing_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1933317900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on registerlink",
+            "match": {
+              "location": "RegisterPageTest.user_clicks_on_registerlink()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1333365900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters contact information \"krishna\" and \"bandaru\" and \"9874564123\" and \"kri124@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "krishna",
+                  "offset": 33
+                },
+                {
+                  "val": "bandaru",
+                  "offset": 47
+                },
+                {
+                  "val": "9874564123",
+                  "offset": 61
+                },
+                {
+                  "val": "kri124@gmail.com",
+                  "offset": 78
+                }
+              ],
+              "location": "RegisterPageTest.user_enters_contact_information_and_and_and(String,String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1120172100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user enters mailing address information \"3-49\" and \"GKPPlots\" and \"HYD\" and \"TS\" and \"87541\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3-49",
+                  "offset": 41
+                },
+                {
+                  "val": "GKPPlots",
+                  "offset": 52
+                },
+                {
+                  "val": "HYD",
+                  "offset": 67
+                },
+                {
+                  "val": "TS",
+                  "offset": 77
+                },
+                {
+                  "val": "87541",
+                  "offset": 86
+                }
+              ],
+              "location": "RegisterPageTest.user_enters_mailing_address_information_and_and_and_and(String,String,String,String,String)"
+            },
+            "matchedColumns": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2624455900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user enters user information \"Test123\" and \"test@123\" and \"test@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Test123",
+                  "offset": 30
+                },
+                {
+                  "val": "test@123",
+                  "offset": 44
+                },
+                {
+                  "val": "test@123",
+                  "offset": 59
+                }
+              ],
+              "location": "RegisterPageTest.user_enters_user_information_and_and(String,String,String)"
+            },
+            "matchedColumns": [
+              9,
+              10,
+              11
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 72800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user closes the browser",
+            "match": {
+              "location": "RegisterPageTest.user_closes_the_browser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "mercurytours Feature",
+    "description": "",
+    "id": "mercurytours-feature",
+    "keyword": "Feature",
+    "uri": "Features/login.feature"
+  }
+]
