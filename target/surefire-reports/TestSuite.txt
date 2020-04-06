@@ -1,4 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 85.149 s - in TestSuite
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 83.991 s <<< FAILURE! - in TestSuite
+feature(com.qa.runner.TestRunner)  Time elapsed: 69.4 s  <<< FAILURE!
+cucumber.runtime.CucumberException: 
+org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 94%. It should be set to 100%
+Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'
+System info: host: 'KRISHNA-PC', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: driver.version: InternetExplorerDriver
+remote stacktrace: 
+	at com.qa.runner.TestRunner.feature(TestRunner.java:47)
+Caused by: org.openqa.selenium.SessionNotCreatedException: 
+Unexpected error launching Internet Explorer. Browser zoom level was set to 94%. It should be set to 100%
+Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'
+System info: host: 'KRISHNA-PC', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: driver.version: InternetExplorerDriver
+remote stacktrace: 
+

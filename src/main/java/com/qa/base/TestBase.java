@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.crm.qa.util.TestUtil;
@@ -41,10 +42,10 @@ public class TestBase {
 	public static void initialization(){
 		String browserName = prop.getProperty("browser");
 		
-		if(browserName.equals("chrome")){
+		if(browserName.equals("IE")){
 			//System.setProperty("webdriver.chrome.driver", "C:\\Users\\krishna\\eclipse-workspace1\\Cucumber\\src\\test\\resources\\Drivers\\chromedriver.exe");	
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver(); 
+			WebDriverManager.iedriver().setup();
+			driver = new InternetExplorerDriver(); 
 		}
 		else if(browserName.equals("FF")){
 			WebDriverManager.firefoxdriver().setup();
