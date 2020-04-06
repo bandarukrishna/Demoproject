@@ -61,7 +61,7 @@ public class TestUtil extends TestBase {
 		 String screenshotloc;
 			
 			 File sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		     File destinationPath = new File(System.getProperty("user.dir") + "/target/cucumber-reports/screenshots/" + System.currentTimeMillis() + ".png");
+		     File destinationPath = new File(System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png");
 			 screenshotloc=destinationPath.toString();
 			 System.out.println("Sslocation: "+screenshotloc.toString());
 			 Files.copy(sourcePath, destinationPath.getAbsoluteFile());   	
