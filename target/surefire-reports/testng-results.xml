@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-04-06T12:18:26Z" name="BDD Test Suite" finished-at="2020-04-06T12:19:43Z" duration-ms="76842">
+  <suite started-at="2020-04-14T14:07:08Z" name="BDD Test Suite" finished-at="2020-04-14T14:07:14Z" duration-ms="6292">
     <groups>
       <group name="cucumber">
-        <method signature="TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.qa.runner.TestRunner@143640d5]" name="feature" class="com.qa.runner.TestRunner"/>
+        <method signature="TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.qa.runner.TestRunner@3f197a46]" name="feature" class="com.qa.runner.TestRunner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2020-04-06T12:18:26Z" name="FREE CRM Test" finished-at="2020-04-06T12:19:43Z" duration-ms="76842">
+    <test started-at="2020-04-14T14:07:08Z" name="FREE CRM Test" finished-at="2020-04-14T14:07:14Z" duration-ms="6292">
       <class name="com.qa.runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.qa.runner.TestRunner@143640d5]" started-at="2020-04-06T12:18:26Z" name="setUpClass" finished-at="2020-04-06T12:18:30Z" duration-ms="4509" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.qa.runner.TestRunner@3f197a46]" started-at="2020-04-14T14:07:08Z" name="setUpClass" finished-at="2020-04-14T14:07:09Z" duration-ms="989" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.qa.runner.TestRunner@143640d5]" started-at="2020-04-06T12:18:32Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-04-06T12:19:38Z" duration-ms="66083" status="FAIL">
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.qa.runner.TestRunner@3f197a46]" started-at="2020-04-14T14:07:09Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-04-14T14:07:13Z" duration-ms="3696" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -24,18 +24,16 @@
           </params>
           <exception class="cucumber.runtime.CucumberException">
             <message>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 94%. It should be set to 100%
-Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'
-System info: host: 'KRISHNA-PC', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: driver.version: InternetExplorerDriver
-remote stacktrace: ]]>
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'KRISHNA-PC', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[cucumber.runtime.CucumberException: org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 94%. It should be set to 100%
-Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'
-System info: host: 'KRISHNA-PC', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: driver.version: InternetExplorerDriver
-remote stacktrace: 
+              <![CDATA[cucumber.runtime.CucumberException: org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'KRISHNA-PC', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: driver.version: RemoteWebDriver
 at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 at com.qa.runner.TestRunner.feature(TestRunner.java:47)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -58,47 +56,96 @@ at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 at java.base/java.lang.Thread.run(Thread.java:835)
-Caused by: org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 94%. It should be set to 100%
-Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'
-System info: host: 'KRISHNA-PC', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: driver.version: InternetExplorerDriver
-remote stacktrace: 
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$1(ProtocolHandshake.java:126)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
-at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:139)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
-at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:186)
-at org.openqa.selenium.ie.InternetExplorerDriver.<init>(InternetExplorerDriver.java:178)
-at org.openqa.selenium.ie.InternetExplorerDriver.<init>(InternetExplorerDriver.java:142)
-at com.qa.base.TestBase.initialization(TestBase.java:48)
+Caused by: org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'KRISHNA-PC', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:667)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:255)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:138)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:175)
+at com.qa.base.TestBase.initialization(TestBase.java:58)
 at stepDefinitions.LandingPageTest.user_is_already_on_landing_Page(LandingPageTest.java:10)
 at ✽.Given user is already on landing Page(Features/login.feature:4)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 192.168.0.106:4444 [/192.168.0.106] failed: Connection refused: connect
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:159)
+at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:139)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:87)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:337)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:136)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:255)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:138)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:175)
+at com.qa.base.TestBase.initialization(TestBase.java:58)
+at stepDefinitions.LandingPageTest.user_is_already_on_landing_Page(LandingPageTest.java:10)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at cucumber.runtime.Utils$1.call(Utils.java:40)
+at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+at cucumber.runtime.Utils.invoke(Utils.java:34)
+at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+at cucumber.runtime.model.CucumberScenarioOutline.run(CucumberScenarioOutline.java:46)
+at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+at com.qa.runner.TestRunner.feature(TestRunner.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.net.ConnectException: Connection refused: connect
+at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method)
+at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107)
+at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+at java.base/java.net.Socket.connect(Socket.java:591)
+at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+... 58 more
 ]]>
             </full-stacktrace>
           </exception> <!-- cucumber.runtime.CucumberException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.qa.runner.TestRunner@143640d5]" started-at="2020-04-06T12:19:38Z" name="tearDownClass" finished-at="2020-04-06T12:19:43Z" duration-ms="4659" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.qa.runner.TestRunner@3f197a46]" started-at="2020-04-14T14:07:13Z" name="tearDownClass" finished-at="2020-04-14T14:07:14Z" duration-ms="1219" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

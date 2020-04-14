@@ -1,12 +1,13 @@
 package stepDefinitions;
 import com.aventstack.extentreports.ExtentTest;
-import com.crm.qa.util.TestUtil;
 import com.qa.base.TestBase;
 import com.qa.pages.LandingPage;
 import com.qa.pages.RegisterPage;
+import com.qa.util.TestUtil;
 import com.vimalselvam.cucumber.listener.Reporter;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
+import cucumber.api.java.BeforeStep;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import gherkin.formatter.model.Step;
@@ -24,8 +25,6 @@ public void initialmethod(){
 	System.out.println("initial method");
 	
 }*/
-
-
 
 	@When("^user clicks on registerlink$")
 	public void user_clicks_on_registerlink() throws Throwable {
@@ -79,8 +78,7 @@ public void initialmethod(){
 		
 	}
 	
-	
-@After(order=0)
+	@After(order=0)
 public void teardown()
 {
 	TestBase.close_browser();	

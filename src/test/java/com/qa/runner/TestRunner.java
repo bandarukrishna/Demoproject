@@ -22,8 +22,8 @@ import cucumber.api.testng.TestNGCucumberRunner;
                 "json:target/cucumber-reports/CucumberTestReport.json",
                 "rerun:target/cucumber-reports/rerun.txt"
         },
-        plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/Extent-Report_Runner.html"}
-
+        plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:"}
+//target/cucumber-reports/Extent-Report_Runner.html
 		)
 //@Listeners(extentlisteners.ExtentListeners.class)
 //@Listeners(com.qa.ExtentReportListener.ExtentReporterNG.class)

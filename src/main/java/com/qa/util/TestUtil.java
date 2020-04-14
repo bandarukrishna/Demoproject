@@ -1,4 +1,4 @@
-package com.crm.qa.util;
+package com.qa.util;
 
 import java.io.File;
 import java.io.FileInputStream;

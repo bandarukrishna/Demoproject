@@ -1,1 +1,7 @@
+com\qa\ExtentReportListener\reportlisteners.class
 com\crm\qa\util\Log.class
+com\crm\qa\util\TestUtil.class
+com\qa\pages\RegisterPage.class
+com\crm\qa\util\WebEventListener.class
+com\qa\pages\LandingPage.class
+com\qa\base\TestBase.class

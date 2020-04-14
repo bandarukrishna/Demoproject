@@ -155,14 +155,14 @@ formatter.match({
   "location": "LandingPageTest.user_is_already_on_landing_Page()"
 });
 formatter.result({
-  "duration": 65218330800,
+  "duration": 27120140300,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPageTest.user_clicks_on_registerlink()"
 });
 formatter.result({
-  "duration": 4561179900,
+  "duration": 1838885800,
   "status": "passed"
 });
 formatter.match({
@@ -187,7 +187,7 @@ formatter.match({
   "location": "RegisterPageTest.user_enters_contact_information_and_and_and(String,String,String,String)"
 });
 formatter.result({
-  "duration": 2257377000,
+  "duration": 653882500,
   "status": "passed"
 });
 formatter.match({
@@ -216,7 +216,7 @@ formatter.match({
   "location": "RegisterPageTest.user_enters_mailing_address_information_and_and_and_and(String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 2096421800,
+  "duration": 399318100,
   "status": "passed"
 });
 formatter.match({
@@ -237,18 +237,18 @@ formatter.match({
   "location": "RegisterPageTest.user_enters_user_information_and_and(String,String,String)"
 });
 formatter.result({
-  "duration": 7200536800,
+  "duration": 5768426600,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPageTest.user_closes_the_browser()"
 });
 formatter.result({
-  "duration": 124500,
+  "duration": 59900,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9259508100,
+  "duration": 7334991600,
   "status": "passed"
 });
 });
