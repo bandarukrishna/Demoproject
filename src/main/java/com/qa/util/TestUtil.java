@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -62,7 +65,7 @@ public class TestUtil extends TestBase {
 			
 			 File sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		     File destinationPath = new File(System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png");
-			 screenshotloc=destinationPath.toString();
+			 screenshotloc=destinationPath.getAbsolutePath().toString();
 			 System.out.println("Sslocation: "+screenshotloc.toString());
 			 Files.copy(sourcePath, destinationPath.getAbsoluteFile());   	
 		return screenshotloc;

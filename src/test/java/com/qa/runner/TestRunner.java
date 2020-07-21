@@ -15,6 +15,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
         features = {"classpath:Features"},
       glue = {"stepDefinitions"},
         monochrome=true,
+        dryRun=false,
        // tags = {"~@Ignore"},
         format = {
                 "pretty",
@@ -22,8 +23,8 @@ import cucumber.api.testng.TestNGCucumberRunner;
                 "json:target/cucumber-reports/CucumberTestReport.json",
                 "rerun:target/cucumber-reports/rerun.txt"
         },
-        plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:"}
-//target/cucumber-reports/Extent-Report_Runner.html
+        plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/ExtentReport.html"}
+//
 		)
 //@Listeners(extentlisteners.ExtentListeners.class)
 //@Listeners(com.qa.ExtentReportListener.ExtentReporterNG.class)
@@ -62,8 +63,7 @@ public class TestRunner {
         Reporter.setSystemInfo("Machine", "Windows 10" + "64 Bit");
         Reporter.setSystemInfo("Selenium", "3.7.0");
         Reporter.setSystemInfo("Maven", "3.5.2");
-        Reporter.setSystemInfo("Java Version", "1.8.0_151");
-        
+        Reporter.setSystemInfo("Java Version", "1.8.0_151");    
         testNGCucumberRunner.finish();
     }
 }

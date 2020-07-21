@@ -6,12 +6,9 @@ import com.qa.pages.RegisterPage;
 import com.qa.util.TestUtil;
 import com.vimalselvam.cucumber.listener.Reporter;
 import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.BeforeStep;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import gherkin.formatter.model.Step;
-
 //@Listeners(com.qa.ExtentReportListener.ITestListenerImpl.class)
 public class RegisterPageTest {
 RegisterPage regpage= new RegisterPage();
@@ -20,18 +17,13 @@ Scenario scenario;
 Step step;
 String Stepname;
 ExtentTest extest;
-/*@Before(order=0)
-public void initialmethod(){
-	System.out.println("initial method");
-	
-}*/
 
 	@When("^user clicks on registerlink$")
 	public void user_clicks_on_registerlink() throws Throwable {
 		 Stepname="Registeration Test Scenario";
 		 Reporter.addScreenCaptureFromPath(TestUtil.takeScreenShot());
 		 lanpage.click_on_register_button();
-		// System.out.println("Step name:" +step.getName());
+		//System.out.println("Step name:" +step.getName());
 		// System.out.println("Scenario name: "+scenario.getId().toString());
 		// Reporter.addScenarioLog(scenario.getName());
 		 Reporter.addStepLog("My test addStepLog message");
@@ -53,9 +45,9 @@ public void initialmethod(){
 	  
 	}
 
-	@Then("^user enters mailing address information \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void user_enters_mailing_address_information_and_and_and_and(String address1, String address2, String city, String state, String postalcode) throws Throwable {
-	   regpage.enterMailingInformation(address1, address2, city, state, postalcode);
+	@Then("^user enters mailing address information \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void user_enters_mailing_address_information_and_and_and_and(String address1, String city, String state, String postalcode) throws Throwable {
+	   regpage.enterMailingInformation(address1,city, state, postalcode);
 	 //  Reporter.addScreenCaptureFromPath(afterScenario());
 	   Reporter.addScreenCaptureFromPath(TestUtil.takeScreenShot());
 	   Reporter.addStepLog("My test addStepLog message2");
@@ -74,14 +66,8 @@ public void initialmethod(){
 
 	@Then("^user closes the browser$")
 	public void user_closes_the_browser() throws Throwable {
-	   
-		
+		TestBase.close_browser();	
+		System.out.println("browser closed");
+   	
 	}
-	
-	@After(order=0)
-public void teardown()
-{
-	TestBase.close_browser();	
-	System.out.println("browser closed");
-}
 }

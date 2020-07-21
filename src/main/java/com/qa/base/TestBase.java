@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -12,6 +14,7 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -24,15 +27,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 	
-	public static RemoteWebDriver driver;
+	public static WebDriver driver;
 	public static Properties prop;
 	public  static EventFiringWebDriver e_driver;
-	public static WebEventListener eventListener;
-	
+	public static WebEventListener eventListener;	
 	public TestBase(){
-		try {
-			
-			                  
+		try {		                  
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com"
 					+ "/qa/config/config.properties");
@@ -51,7 +51,9 @@ public class TestBase {
 		if(browserName.equals("chrome")){
 			//System.setProperty("webdriver.chrome.driver", "C:\\Users\\krishna\\eclipse-workspace1\\Cucumber\\src\\test\\resources\\Drivers\\chromedriver.exe");	
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver(); 
+				driver = new ChromeDriver(); 
+			//HtmlUnitDriver HDriver = new HtmlUnitDriver();
+		
 		//	DesiredCapabilities dr=DesiredCapabilities.chrome();
 	       // dr.setBrowserName("chrome");
 	      //  dr.setPlatform(Platform.LINUX);
@@ -60,6 +62,7 @@ public class TestBase {
 		else if(browserName.equals("FF")){
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver(); 
+			//Selenium s=new WebDriverBackedSelenium(driver,"xyz");
 			
 		}
 		
@@ -71,7 +74,7 @@ public class TestBase {
 		driver = e_driver;*/
 		
 		driver.manage().window().maximize();
-		//driver.manage().deleteAllCookies();
+		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
@@ -88,7 +91,8 @@ public class TestBase {
 
 
 	public static String getReportConfigPath(){
-		String reportConfigPath = System.getProperty("user.dir")+prop.getProperty("reportConfigPath");
+		//System.out.println("Path"  +System.getProperty("user.dir")+prop.getProperty("reportConfigPath"));
+		String reportConfigPath =System.getProperty("user.dir")+"/src/main/resources/extent-config.xml"; //System.getProperty("user.dir")+prop.getProperty("reportConfigPath");
 				//"C://Users//krishna//eclipse-workspace1//Cucumber//src//main//resources//extent-config.xml";
 				//prop.getProperty("reportConfigPath");
 		if(reportConfigPath!= null) return reportConfigPath;
@@ -96,7 +100,13 @@ public class TestBase {
 	}
 	
 	
-	
+	public static  String GetCurrentTimeStamp() {
+	    SimpleDateFormat sdfDate = new SimpleDateFormat(
+	            "yyyy-MM-dd HH:mm:ss.SSS");// dd/MM/yyyy
+	    Date now = new Date();
+	    String strDate = sdfDate.format(now);
+	    return strDate;
+	}
 	
 
 }

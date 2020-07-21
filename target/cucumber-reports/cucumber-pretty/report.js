@@ -12,7 +12,13 @@ formatter.scenarioOutline({
   "description": "",
   "id": "mercurytours-feature;registeration-test-scenario",
   "type": "scenario_outline",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 2,
+      "name": "@test"
+    }
+  ]
 });
 formatter.step({
   "line": 4,
@@ -31,7 +37,7 @@ formatter.step({
 });
 formatter.step({
   "line": 7,
-  "name": "user enters mailing address information \"\u003caddress1\u003e\" and \"\u003caddress2\u003e\" and \"\u003ccity\u003e\" and \"\u003cstate\u003e\" and \"\u003cpostalcode\u003e\"",
+  "name": "user enters mailing address information \"\u003caddress1\u003e\" and \"\u003ccity\u003e\" and \"\u003cstate\u003e\" and \"\u003cpostalcode\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
@@ -63,7 +69,6 @@ formatter.examples({
         "phone",
         "email",
         "address1",
-        "address2",
         "city",
         "state",
         "postalcode",
@@ -81,7 +86,6 @@ formatter.examples({
         "9874564123",
         "kri124@gmail.com",
         "3-49",
-        "GKPPlots",
         "HYD",
         "TS",
         "87541",
@@ -101,7 +105,13 @@ formatter.scenario({
   "description": "",
   "id": "mercurytours-feature;registeration-test-scenario;;2",
   "type": "scenario",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 2,
+      "name": "@test"
+    }
+  ]
 });
 formatter.step({
   "line": 4,
@@ -126,13 +136,12 @@ formatter.step({
 });
 formatter.step({
   "line": 7,
-  "name": "user enters mailing address information \"3-49\" and \"GKPPlots\" and \"HYD\" and \"TS\" and \"87541\"",
+  "name": "user enters mailing address information \"3-49\" and \"HYD\" and \"TS\" and \"87541\"",
   "matchedColumns": [
     4,
     5,
     6,
-    7,
-    8
+    7
   ],
   "keyword": "Then "
 });
@@ -140,9 +149,9 @@ formatter.step({
   "line": 8,
   "name": "user enters user information \"Test123\" and \"test@123\" and \"test@123\"",
   "matchedColumns": [
+    8,
     9,
-    10,
-    11
+    10
   ],
   "keyword": "Then "
 });
@@ -155,14 +164,14 @@ formatter.match({
   "location": "LandingPageTest.user_is_already_on_landing_Page()"
 });
 formatter.result({
-  "duration": 27120140300,
+  "duration": 46217959600,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPageTest.user_clicks_on_registerlink()"
 });
 formatter.result({
-  "duration": 1838885800,
+  "duration": 5181486500,
   "status": "passed"
 });
 formatter.match({
@@ -187,7 +196,7 @@ formatter.match({
   "location": "RegisterPageTest.user_enters_contact_information_and_and_and(String,String,String,String)"
 });
 formatter.result({
-  "duration": 653882500,
+  "duration": 1776419700,
   "status": "passed"
 });
 formatter.match({
@@ -197,26 +206,22 @@ formatter.match({
       "offset": 41
     },
     {
-      "val": "GKPPlots",
+      "val": "HYD",
       "offset": 52
     },
     {
-      "val": "HYD",
-      "offset": 67
-    },
-    {
       "val": "TS",
-      "offset": 77
+      "offset": 62
     },
     {
       "val": "87541",
-      "offset": 86
+      "offset": 71
     }
   ],
-  "location": "RegisterPageTest.user_enters_mailing_address_information_and_and_and_and(String,String,String,String,String)"
+  "location": "RegisterPageTest.user_enters_mailing_address_information_and_and_and_and(String,String,String,String)"
 });
 formatter.result({
-  "duration": 399318100,
+  "duration": 3058447600,
   "status": "passed"
 });
 formatter.match({
@@ -237,18 +242,14 @@ formatter.match({
   "location": "RegisterPageTest.user_enters_user_information_and_and(String,String,String)"
 });
 formatter.result({
-  "duration": 5768426600,
+  "duration": 4404279500,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPageTest.user_closes_the_browser()"
 });
 formatter.result({
-  "duration": 59900,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 7334991600,
+  "duration": 6101961000,
   "status": "passed"
 });
 });

@@ -7,23 +7,12 @@
         "name": "Registeration Test Scenario",
         "description": "",
         "id": "mercurytours-feature;registeration-test-scenario;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 7334991600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "RegisterPageTest.teardown()"
-            }
-          }
-        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 27120140300,
+              "duration": 46217959600,
               "status": "passed"
             },
             "line": 4,
@@ -35,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 1838885800,
+              "duration": 5181486500,
               "status": "passed"
             },
             "line": 5,
@@ -47,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 653882500,
+              "duration": 1776419700,
               "status": "passed"
             },
             "line": 6,
@@ -83,11 +72,11 @@
           },
           {
             "result": {
-              "duration": 399318100,
+              "duration": 3058447600,
               "status": "passed"
             },
             "line": 7,
-            "name": "user enters mailing address information \"3-49\" and \"GKPPlots\" and \"HYD\" and \"TS\" and \"87541\"",
+            "name": "user enters mailing address information \"3-49\" and \"HYD\" and \"TS\" and \"87541\"",
             "match": {
               "arguments": [
                 {
@@ -95,36 +84,31 @@
                   "offset": 41
                 },
                 {
-                  "val": "GKPPlots",
+                  "val": "HYD",
                   "offset": 52
                 },
                 {
-                  "val": "HYD",
-                  "offset": 67
-                },
-                {
                   "val": "TS",
-                  "offset": 77
+                  "offset": 62
                 },
                 {
                   "val": "87541",
-                  "offset": 86
+                  "offset": 71
                 }
               ],
-              "location": "RegisterPageTest.user_enters_mailing_address_information_and_and_and_and(String,String,String,String,String)"
+              "location": "RegisterPageTest.user_enters_mailing_address_information_and_and_and_and(String,String,String,String)"
             },
             "matchedColumns": [
               4,
               5,
               6,
-              7,
-              8
+              7
             ],
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 5768426600,
+              "duration": 4404279500,
               "status": "passed"
             },
             "line": 8,
@@ -147,15 +131,15 @@
               "location": "RegisterPageTest.user_enters_user_information_and_and(String,String,String)"
             },
             "matchedColumns": [
+              8,
               9,
-              10,
-              11
+              10
             ],
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 59900,
+              "duration": 6101961000,
               "status": "passed"
             },
             "line": 9,
@@ -164,6 +148,12 @@
               "location": "RegisterPageTest.user_closes_the_browser()"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 2,
+            "name": "@test"
           }
         ]
       }
