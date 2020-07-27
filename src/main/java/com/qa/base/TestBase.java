@@ -3,26 +3,16 @@ package com.qa.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
-
 import com.qa.util.TestUtil;
 import com.qa.util.WebEventListener;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
@@ -93,12 +83,8 @@ public class TestBase {
 	public static String getReportConfigPath(){
 		//System.out.println("Path"  +System.getProperty("user.dir")+prop.getProperty("reportConfigPath"));
 		String reportConfigPath =System.getProperty("user.dir")+"/src/main/resources/extent-config.xml"; //System.getProperty("user.dir")+prop.getProperty("reportConfigPath");
-				//"C://Users//krishna//eclipse-workspace1//Cucumber//src//main//resources//extent-config.xml";
-				//prop.getProperty("reportConfigPath");
-		if(reportConfigPath!= null) return reportConfigPath;
-		else throw new RuntimeException("Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath");		
+				return reportConfigPath;		
 	}
-	
 	
 	public static  String GetCurrentTimeStamp() {
 	    SimpleDateFormat sdfDate = new SimpleDateFormat(
@@ -106,7 +92,5 @@ public class TestBase {
 	    Date now = new Date();
 	    String strDate = sdfDate.format(now);
 	    return strDate;
-	}
-	
-
+	}	
 }
